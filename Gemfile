@@ -51,3 +51,17 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# S3アップロード
+gem 'fog-aws'
+
+gem 'devise'
+gem 'jquery-rails'
+
+# 画像のアップロード
+gem 'mini_magick'
+gem 'carrierwave'
+
+gem'haml-rails'
+
+gem'font-awesome-sass'
