@@ -1,7 +1,4 @@
-class UsersController < ApplicationController
-
-  def index
-  end
+class PostsController < ApplicationController
 
   def new
   end

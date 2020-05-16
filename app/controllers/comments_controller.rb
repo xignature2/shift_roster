@@ -1,15 +1,8 @@
-class UsersController < ApplicationController
-
-  def index
-  end
-
+class CommentsController < ApplicationController
   def new
   end
 
   def creat
-  end
-
-  def show
   end
 
   def edit
