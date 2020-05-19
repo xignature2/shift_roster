@@ -1,0 +1,10 @@
+.contents.row
+  .container
+    = form_for @post do |f|
+      %h3
+        投稿フォーム
+      = f.text_field :title, class: "input-default", placeholder: "例）○○について"
+      = f.fields_for :images do |i|
+        = i.file_field :image_url
+      = f.text_area :content, placeholder: "皆で情報を共有しましよう！" , rows: "10"
+      = f.submit "投稿する"

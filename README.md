@@ -13,12 +13,20 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
 |text|content|null: false|
 |user|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :comments
+
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|text|null: false|
+|post|references|foreign_key: true|
+
+### Association
+- belongs_to : post
 
 ## commentsテーブル
 |Column|Type|Options|
