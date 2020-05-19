@@ -1,0 +1,71 @@
+.header{
+  padding: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+
+  &__bar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  }
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  max-width: 850px;
+  a{
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.main_logo{
+  font-size: 50px;
+  line-height: 41px;
+  float: left;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  
+  a{color: chocolate;
+  }
+}
+
+.bar_right{
+  margin-left: 10px;
+  display: flex;
+ 
+  a{
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #57C3E9;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  li{
+    display: inline-block;
+    text-decoration: none;
+    color: #57C3E9;
+    border: solid 2px #57C3E9;
+    border-radius: 3px;
+    transition: .4s;
+    margin-left: 20px;
+  }
+
+  li:hover{
+    background: #57C3E9;; 
+  }
+
+  a:hover{
+    color:white;
+  }
+}
