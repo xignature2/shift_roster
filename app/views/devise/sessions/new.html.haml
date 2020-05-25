@@ -1,20 +1,25 @@
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h5 登録済みアカウントでログイン
-    .account-page__inner--right.user-form
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+.contents.row
+  .container
+    .h2 登録済みアカウントでログイン
+
+  .account-page_inner.user-form
+    = form_for(@user, url: new_user_session_path) do |f|
+      .field
+        .field-label
+          = f.label :メールアドレス
+        .field-input
+          = f.email_field :email, autofocus: true, class: "new-inp"
+
         .field
           .field-label
-            = f.label :メールアドレス
+            = f.label :パスワード
           .field-input
-            = f.email_field :email, autofocus: true
-          .field
-            .field-label
-              = f.label :パスワード
-            .field-input
-              = f.password_field :password, autocomplete: "off"
-          .actions
-            = f.submit "ログイン", class: 'btn'
+            = f.password_field :password, autocomplete: "off", class: "new-inp"
 
-      = render "devise/shared/links"
+        - if devise_mapping.rememberable?
+          .field
+            = f.check_box :remember_me
+            = f.label :ログイン状態を維持する
+   
+        .actions
+          = f.submit "ログイン", class: 'e-btn'

@@ -7,15 +7,15 @@
       - if user_signed_in?
         .bar_right
           %span
-            = current_user.nickname
+            = current_user.name
             %ul.user__info
               %li
                 = link_to users_path(:id) do
                   マイページ
               %li    
-                = link_to destroy_user_session_path do
+                = link_to destroy_user_session_path, method: :delete do
                   ログアウト
-          = link_to posts_new_path do
+          = link_to posts_path do
             メッセージを投稿
       - else
         .bar_right
