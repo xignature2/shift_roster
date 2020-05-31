@@ -15,11 +15,6 @@
             = f.label :パスワード
           .field-input
             = f.password_field :password, autocomplete: "off", class: "new-inp"
-
-        - if devise_mapping.rememberable?
-          .field
-            = f.check_box :remember_me
-            = f.label :ログイン状態を維持する
    
         .actions
           = f.submit "ログイン", class: 'e-btn'

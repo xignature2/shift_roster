@@ -1,0 +1,20 @@
+.main-contents.row
+  .m-container
+    %ul 
+      会社員
+      - @users.each do |user|
+        %li.user_name
+          = user.name
+
+      
+      -# %tr
+      -#   %td 愛知県
+      -#   %td 5,172km2
+      -#   %td 7,526,911人
+      
+      -# %tr
+      -#   %td 東京都
+      -#   %td 2,193km2
+      -#   %td 13,742,906人
+          
+

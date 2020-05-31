@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
 
   def index
-    @posts = Post.includes(:images).order('created_at DESC')
+    @users = User.all
+    # @user = User.find(params[:user_id])
+    # @posts = Post.includes(:images).order('created_at DESC')
   end
 
   def new
@@ -24,14 +26,5 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
- 
-  # private
-
-  # def user_params
-  #   params.require(:user).permit(:name, :email, :passward)
-  # end
 
 end
