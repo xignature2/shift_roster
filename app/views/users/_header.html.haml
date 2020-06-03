@@ -8,18 +8,18 @@
         .bar_right
           %span
             = current_user.name
-            %ul.user__info
-              %li
+            %ul.user__info1
+              .login
                 = link_to users_path(:id) do
                   マイページ
-              %li    
                 = link_to destroy_user_session_path, method: :delete do
                   ログアウト
-          = link_to posts_path do
+          = link_to new_post_path, class: "post" do
             メッセージを投稿
+
       - else
         .bar_right
-          %ul.user__info
+          %ul.user__info2
             %li
               = link_to new_user_session_path do
                 ログイン
