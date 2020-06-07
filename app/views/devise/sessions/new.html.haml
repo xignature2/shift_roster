@@ -1,0 +1,20 @@
+.contents.row
+  .container
+    .h2 登録済みアカウントでログイン
+
+  .account-page_inner.user-form
+    = form_for(@user, url: new_user_session_path) do |f|
+      .field
+        .field-label
+          = f.label :メールアドレス
+        .field-input
+          = f.email_field :email, autofocus: true, class: "new-inp"
+
+        .field
+          .field-label
+            = f.label :パスワード
+          .field-input
+            = f.password_field :password, autocomplete: "off", class: "new-inp"
+   
+        .actions
+          = f.submit "ログイン", class: 'e-btn'

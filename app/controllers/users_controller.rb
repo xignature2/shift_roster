@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
+    # @user = User.find(params[:user_id])
+    # @posts = Post.includes(:images).order('created_at DESC')
   end
 
   def new
@@ -16,9 +19,12 @@ class UsersController < ApplicationController
   end
 
   def update
+    if current_user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
-  def destroy
-  end
 
 end

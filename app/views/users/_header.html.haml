@@ -1,18 +1,28 @@
-%body
+.wrapper
   %header.header
     .header__bar.row
-      %h1.grid-6
-        %a{:href => "/"} PicTweet
+      %h1.main_logo
+        = link_to root_path do
+          当番表アプリ
       - if user_signed_in?
-        .user_nav.grid-6
+        .bar_right
           %span
-            = current_user.nickname
-            %ul.user__info
-              %li
-                = link_to "マイページ", "/users/#{current_user.id}"
-                = link_to "ログアウト", destroy_user_session_path, method: :delete
-          = link_to  "投稿する", "/tweets/new", class: "post"
+            = current_user.name
+            %ul.user__info1
+              .login
+                = link_to users_path(:id) do
+                  マイページ
+                = link_to destroy_user_session_path, method: :delete do
+                  ログアウト
+          = link_to new_post_path, class: "post" do
+            メッセージを投稿
+
       - else
-        .grid-6
-          = link_to "ログイン", new_user_session_path, class: 'post'
-          = link_to "新規登録", new_user_registration_path, class: 'post'
+        .bar_right
+          %ul.user__info2
+            %li
+              = link_to new_user_session_path do
+                ログイン
+            %li
+              = link_to new_user_registration_path do
+                新規登録

@@ -1,0 +1,10 @@
+.main-contents.row
+  .m-container
+    %ul
+      本日の当番
+      - @users.each do |user|
+        %li.user_name
+          = user.name
+
+
+

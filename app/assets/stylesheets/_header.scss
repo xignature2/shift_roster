@@ -1,0 +1,144 @@
+.header{
+  padding: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+
+  &__bar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  }
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  max-width: 850px;
+  a{
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.main_logo{
+  font-size: 50px;
+  line-height: 41px;
+  float: left;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  
+  a{color: chocolate;
+  }
+}
+
+.bar_right{
+  margin-left: 10px;
+  
+  position: relative;
+  width: 400px;
+
+  span {
+    letter-spacing: 0.15em;
+    color: rgb(102, 102, 102);
+    float: right;
+    text-align: right;
+    top: 5px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      content: '▼';
+      font-size: .7em;
+      margin-left: -4px;
+    }
+    &:hover ul {
+      color: red;
+      display: block;
+    }
+  }
+ 
+  a{
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #57C3E9;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  .user__info1 {
+    display: none;
+    position: absolute;
+    right: 0;
+  }
+
+  .user__info2 { 
+    position: absolute;
+    right: 0;
+   
+  }
+
+  .login{
+    background-color: #f0f0f0;
+    a {
+      letter-spacing: 0.15em;
+      color: gray;
+      display: block;
+      padding: 10px 20px;
+      text-align: left;
+      border-bottom: 1px solid #d8d8d8;
+      font-family: sans-serif;
+    }
+    a:hover{
+      color:#57C3E9;
+    }
+  }
+
+  li{
+    display: inline-block;
+    text-decoration: none;
+    color: #57C3E9;
+    border: solid 2px #57C3E9;
+    border-radius: 3px;
+    transition: .4s;
+    margin-left: 20px;
+  }
+
+  li:hover{
+    background: #57C3E9;; 
+  }
+
+  a:hover{
+    color:white;
+  }
+  .post{
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #57C3E9;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    border: solid 2px #57C3E9;
+    border-radius: 3px;
+    transition: .3s;
+    margin-left: 20px;
+  }
+  .post:hover{
+    background: #57C3E9;; 
+  } 
+}
