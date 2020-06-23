@@ -1,5 +1,5 @@
 .wrapper
-  %header.header
+  .header
     .header__bar.row
       %h1.main_logo
         = link_to root_path do
@@ -10,7 +10,7 @@
             = current_user.name
             %ul.user__info1
               .login
-                = link_to users_path(:id) do
+                = link_to user_path(:id) do
                   マイページ
                 = link_to destroy_user_session_path, method: :delete do
                   ログアウト

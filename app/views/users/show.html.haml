@@ -1,0 +1,24 @@
+.contents.row
+  %p.name
+    = @name
+    さんの投稿一覧
+  .post-container
+    .post-box
+      - @posts.each do |post|
+        .p-Label
+          %label 
+            =  post.title
+        .p-text
+          = post.content
+        .pic-container
+        - post.images.each do |image|
+          = image_tag image.image_url.url, alt: "preview"
+        %ul.p-destroy
+          = link_to '編集', edit_post_path(post.id), method: :get
+          %li
+            = link_to '削除', post_path(post.id), method: :delete
+
+
+    .my-box
+      = link_to root_path, class: "mypage-btn" do
+        TOPページへ戻る

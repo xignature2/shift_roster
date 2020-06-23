@@ -11,12 +11,9 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :destroy] do
   end
 
-  resources :posts, only: [:index, :new, :creat, :show, :edit, :destroy] do
+  resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    resources :commnts, only: [:create, :edit, :destroy] do
+    end
   end
-
-  resources :commnts, only: [:creat, :edit, :destroy] do
-  end
-
-  
   
 end

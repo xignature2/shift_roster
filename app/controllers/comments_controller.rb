@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def new
   end
 
-  def creat
+  def create
   end
 
   def edit
