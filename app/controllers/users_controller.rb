@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # @user = User.find(params[:user_id])
-    # @posts = Post.includes(:images).order('created_at DESC')
+    @posts = Post.all
+    @posts = Post.includes(:images)
   end
 
   def new
@@ -13,8 +13,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    @name = current_user.name
+    @posts = current_user.posts
+    # @user = User.find(params[:user_id])
   end
-
+  
   def edit
   end
 

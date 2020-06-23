@@ -1,0 +1,86 @@
+.name{
+  font-size: 35px;
+  color: gray;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+
+.post-container{
+  margin-top: 10px;
+  color: black;
+
+  .post-box-title{
+   font-size: 25px;
+   font-weight: 500;
+  }
+
+  .post-box{
+    margin-left: 20px;
+    margin-top: 30px;
+
+    .p-Label{
+      margin-top: 20px;
+    }
+
+    span{ 
+      font-size: 16px;
+      padding: 0 4px;
+      margin-top: 5px;
+      background-color: #57C3E9;
+      color: #fff;
+      border-radius: 2px;
+      display: inline-block;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.6em;
+    }
+    label{
+      font-size:20px;
+      margin-left: 5px;
+    }
+    .p-text{
+      margin-top: 10px;
+    }
+
+    .pic-container{
+      max-width: 660px; 
+      max-height: 400px;
+    }
+    .p-destroy{
+      display: flex;
+      font-size:18px;
+
+      li{
+        margin-left: 15px;
+      }
+
+      a{
+        color: #57C3E9;
+      }
+    }
+  }
+}
+.my-box{
+  margin: 0 auto;
+  text-align: center;
+  .mypage-btn{
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  a{
+    padding: 8px 20px;
+    font-size: 14px;
+    border: 2px solid #57C3E9;
+    color: #57C3E9;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  a:hover{
+    color:white;
+    background-color: #57C3E9;
+    transition: .4s;
+  }
+  
+}

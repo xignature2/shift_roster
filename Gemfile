@@ -62,9 +62,13 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'carrierwave'
 
+
 gem'haml-rails'
 
 gem'font-awesome-sass'
 
+gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+gem 'pry-rails'
