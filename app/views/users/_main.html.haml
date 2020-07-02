@@ -1,9 +1,11 @@
 .main-contents.row
   .m-container
-    %ul
+    .title
       ⭐︎本日の当番
+    %ul
       - @users.each do |user|
-        %li.user_name
+        .div.pp
+        %li#oo.user_name
           = user.name
 
     %hr.underbar 
